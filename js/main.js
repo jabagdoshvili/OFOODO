@@ -1,11 +1,18 @@
-$('.select-container:not(.opened)').click(function (ev) {
-    $('.select-container.opened').removeClass('opened')
-
+var contNames = []
+$('.select-container').click(function (ev) {
+    // $('.select-container.opened').removeClass('opened')
+    
     ev.stopPropagation()
     var containerName = $(this).attr('contName')
-    InitSelectContainer(containerName)
-
+    
+    
+    if(!contNames.includes(containerName)) {
+        InitSelectContainer(containerName)
+        contNames.push(containerName)
+    }
+    
     var rect = $(this)[0].getBoundingClientRect()
+    
 
     if(!$(this).hasClass('opened')) {
         $('.select-body').css({
@@ -13,9 +20,13 @@ $('.select-container:not(.opened)').click(function (ev) {
             'top': rect.top + $(this).outerHeight(),
             'width': rect.width
         }).show()
-    $(this).toggleClass('opened')
-
+        $('.select-container').removeClass('opened')
+        $(this).addClass('opened')
+    } else {
+        $('.select-body').hide()
+        $('.select-container').removeClass('opened')
     }
+
 
 })
 
@@ -86,12 +97,23 @@ function InitSelectContainer(openSelectContainer) {
 
 
 
-$('.select-body').on('change', 'input[name="All"]', function() {
+$('.select-body').on('change', 'input', function(ev) {
+    ev.preventDefault()
+    var thisSelectBody = $(this).closest('.select-body')
+    var checkedInput = $('input:checked', thisSelectBody)
 
-    if ($(this).is(':checked')) {
-        $('.select-body input').attr('checked', true);
+    if($(this).is('[name="All"]')) {
+        if ($(this).is(':checked')) {
+            $('.select-body input').prop('checked', true);
+        } else {
+            $('.select-body input').prop('checked', false);
+        }
     } else {
-        $('.select-body input').attr('checked', false);
+        if(!$(this).is(':checked')) {
+            $('[name="All"]', thisSelectBody).prop('checked', false)
+        } else if($('input', thisSelectBody).length - 1  == checkedInput.length) {
+            $('[name="All"]', thisSelectBody).prop('checked', true)
+        }
     }
 
 });
