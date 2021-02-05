@@ -40,7 +40,7 @@ thead, tbody tr {
 }
 
 thead tr th:nth-child(3) {
-    width: 20%;
+    width: calc(20%);
 }
 
 thead tr th:nth-child(4) {
@@ -63,10 +63,25 @@ thead tr th:nth-child(5) {
     width: 20%;
    }
 
+
+   /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2473D5; 
+  }
+
+
 tbody {
     display:block;
     height: calc(100vh - 21rem);
-    overflow:auto;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
 
 body {
@@ -214,30 +229,30 @@ nav {
                     }
                 }
 
-                // &:hover {
-                //     &> * {
-                //         filter: invert(1);
-                //     }
-                //     &::after {
-                //         opacity: 1 !important;
-                //         transform: translateX(0%) !important;
+                &:hover {
+                    &> * {
+                        filter: invert(1);
+                    }
+                    // &::after {
+                    //     opacity: 1 !important;
+                    //     transform: translateX(0%) !important;
 
-                //     }
+                    // }
 
-                //     & + .radius {
-                //         span {
-                //             &::before {
-                //                 transform: translate(-50%, -50%) scale(2) !important;
-                //             }
+                    // & + .radius {
+                    //     span {
+                    //         &::before {
+                    //             transform: translate(-50%, -50%) scale(2) !important;
+                    //         }
         
-                //             &:last-child {
-                //                 &::before {
-                //                 transform: translate(-50%, 50%) scale(2) !important;
-                //                 }
-                //             }
-                //         }
-                //     }
-                // }
+                    //         &:last-child {
+                    //             &::before {
+                    //             transform: translate(-50%, 50%) scale(2) !important;
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                }
 
                 // &.active, &:hover {
 
