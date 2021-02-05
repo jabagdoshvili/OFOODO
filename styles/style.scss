@@ -79,7 +79,7 @@ thead tr th:nth-child(5) {
 
 tbody {
     display:block;
-    height: calc(100vh - 21rem);
+    height: calc(100vh - 17rem);
     overflow-y:scroll;
     overflow-x:hidden;
 }
@@ -164,9 +164,28 @@ nav ul {
 
 }
 
-.map-section a img{
+.map-section > a img{
     width: 35px;
     height: 50px;
+    object-fit: contain;
+}
+
+.menu-item img {
+    padding-right: 2.5rem;
+    width: 2.125rem;
+    height: 2.125rem;
+    object-fit: contain;
+}
+
+.bottom-corner img{
+    width: 2.125rem;
+    height: 2.125rem;
+    object-fit: contain;
+}
+
+.top-corner img {
+    width: 2.125rem;
+    height: 2.125rem;
     object-fit: contain;
 }
 
@@ -180,12 +199,9 @@ nav {
     ul {
         li {
             position: relative;
-            img {
-                padding-right: 2.5rem;
-                width: 2.125rem;
-                height: 2.125rem;
-                object-fit: contain;
-            }
+            // img {
+
+            // }
             a {
                 position: relative;
                 height: 5.1875rem;
@@ -360,7 +376,7 @@ nav.compressed {
         font-size: 2.5rem;
         line-height: 2.9375rem;
         color: #102C55;
-        padding-bottom: 1.875rem;
+        padding-bottom: 0.875rem;
         h1 {
             font-size: 2.5rem;
         }
@@ -552,6 +568,7 @@ div {
     width: 100%;
     margin-top: 0.625rem;
     thead {
+        width: calc(100% - 5px);
         th {
             border: 0.0625rem solid #E7E7E7;
             height: 4.3125rem;
@@ -1020,14 +1037,14 @@ table thead tr {
                     font-weight: bold;
                     margin-bottom: 0.425rem;
                     a {
-                        color: #102C55;
+                        color: black;
                     }
                 }
                 &:nth-child(2) {
                     font-size: 0.8rem;
                     max-width: 18rem;
                     a {
-                        color: #102C55;
+                        color: black;
                     }
                 }
                 img {

@@ -75,7 +75,7 @@ td:nth-child(5) {
 
 tbody {
   display: block;
-  height: calc(100vh - 21rem);
+  height: calc(100vh - 17rem);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -183,9 +183,31 @@ nav ul {
      object-fit: contain;
 }
 
-.map-section a img {
+.map-section > a img {
   width: 35px;
   height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menu-item img {
+  padding-right: 2.5rem;
+  width: 2.125rem;
+  height: 2.125rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bottom-corner img {
+  width: 2.125rem;
+  height: 2.125rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.top-corner img {
+  width: 2.125rem;
+  height: 2.125rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -202,14 +224,6 @@ nav {
 
 nav ul li {
   position: relative;
-}
-
-nav ul li img {
-  padding-right: 2.5rem;
-  width: 2.125rem;
-  height: 2.125rem;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 nav ul li a {
@@ -372,7 +386,7 @@ nav.compressed > ul li img {
   font-size: 2.5rem;
   line-height: 2.9375rem;
   color: #102C55;
-  padding-bottom: 1.875rem;
+  padding-bottom: 0.875rem;
 }
 
 .section-area .section-title h1 {
@@ -647,6 +661,10 @@ nav.compressed > ul li img {
 .table {
   width: 100%;
   margin-top: 0.625rem;
+}
+
+.table thead {
+  width: calc(100% - 5px);
 }
 
 .table thead th {
@@ -1282,7 +1300,7 @@ table thead tr th:last-child {
 }
 
 .tb-info div span:first-child a {
-  color: #102C55;
+  color: black;
 }
 
 .tb-info div span:nth-child(2) {
@@ -1291,7 +1309,7 @@ table thead tr th:last-child {
 }
 
 .tb-info div span:nth-child(2) a {
-  color: #102C55;
+  color: black;
 }
 
 .tb-info div span img {
