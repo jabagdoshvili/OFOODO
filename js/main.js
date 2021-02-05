@@ -70,6 +70,16 @@ var selectContainers = {
             id: '4',
             name: 'On the way'
         }
+    ],
+    order: [
+        {
+            id: '0',
+            name: 'Order ID'
+        },
+        {
+            id: '1',
+            name: 'Order Time'
+        },
     ]
 }
 

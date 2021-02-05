@@ -634,6 +634,52 @@ nav.compressed > ul li img {
   color: rgba(35, 31, 32, 0.5);
 }
 
+.selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1.125rem;
+}
+
+.selects span {
+  margin-right: 0.9375rem;
+  font-weight: normal;
+  font-size: 1.275rem;
+  line-height: 1.625rem;
+}
+
+.selects .select-container {
+  border: 0.0625rem solid rgba(35, 31, 32, 0.2);
+  width: 12.375rem;
+  border-radius: 2.1875rem;
+  height: 3.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.selects .select-container.opened {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.selects .select-container span {
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  color: rgba(35, 31, 32, 0.5);
+}
+
 .order-id {
   font-weight: normal;
   font-size: 1.125rem;
