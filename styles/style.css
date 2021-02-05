@@ -1203,7 +1203,7 @@ table thead tr th:last-child {
 .tb-status .time {
   width: 5.875rem;
   height: 1.5rem;
-  border: 0.1563rem solid #2473D5;
+  border: 1px solid #2473D5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #2473D5;
