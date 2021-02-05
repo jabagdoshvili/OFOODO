@@ -149,6 +149,12 @@ nav ul {
 
 }
 
+.map-section a img{
+    width: 35px;
+    height: 50px;
+    object-fit: contain;
+}
+
 nav {
     width: 20.75rem;
     height: 100vh;
@@ -208,30 +214,30 @@ nav {
                     }
                 }
 
-                &:hover {
-                    &> * {
-                        filter: invert(1);
-                    }
-                    &::after {
-                        opacity: 1 !important;
-                        transform: translateX(0%) !important;
+                // &:hover {
+                //     &> * {
+                //         filter: invert(1);
+                //     }
+                //     &::after {
+                //         opacity: 1 !important;
+                //         transform: translateX(0%) !important;
 
-                    }
+                //     }
 
-                    & + .radius {
-                        span {
-                            &::before {
-                                transform: translate(-50%, -50%) scale(2) !important;
-                            }
+                //     & + .radius {
+                //         span {
+                //             &::before {
+                //                 transform: translate(-50%, -50%) scale(2) !important;
+                //             }
         
-                            &:last-child {
-                                &::before {
-                                transform: translate(-50%, 50%) scale(2) !important;
-                                }
-                            }
-                        }
-                    }
-                }
+                //             &:last-child {
+                //                 &::before {
+                //                 transform: translate(-50%, 50%) scale(2) !important;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
 
                 // &.active, &:hover {
 
@@ -652,7 +658,7 @@ color: #102C55;
 
 .select-body {
     position: absolute;
-    border: 0.0625rem solid #2473D5;
+    border: 0.0625rem solid rgba(35, 31, 32, 0.2);
     width: 12.375rem;
     // border-radius: 2.1875rem;
     // display: flex;
@@ -662,6 +668,8 @@ color: #102C55;
     display: none;
     background-color: white;
     box-sizing: border-box;
+    border-bottom-left-radius: 2.1875rem;
+    border-bottom-right-radius: 2.1875rem;
     ul {
         display: flex;
         flex-direction: column;

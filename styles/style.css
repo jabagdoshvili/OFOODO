@@ -172,6 +172,13 @@ nav ul {
      object-fit: contain;
 }
 
+.map-section a img {
+  width: 35px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 nav {
   width: 20.75rem;
   height: 100vh;
@@ -234,27 +241,6 @@ nav ul li a.active + .radius span::before {
 }
 
 nav ul li a.active + .radius span:last-child::before {
-  -webkit-transform: translate(-50%, 50%) scale(2) !important;
-          transform: translate(-50%, 50%) scale(2) !important;
-}
-
-nav ul li a:hover > * {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-nav ul li a:hover::after {
-  opacity: 1 !important;
-  -webkit-transform: translateX(0%) !important;
-          transform: translateX(0%) !important;
-}
-
-nav ul li a:hover + .radius span::before {
-  -webkit-transform: translate(-50%, -50%) scale(2) !important;
-          transform: translate(-50%, -50%) scale(2) !important;
-}
-
-nav ul li a:hover + .radius span:last-child::before {
   -webkit-transform: translate(-50%, 50%) scale(2) !important;
           transform: translate(-50%, 50%) scale(2) !important;
 }
@@ -812,7 +798,7 @@ nav.compressed > ul li img {
 
 .select-body {
   position: absolute;
-  border: 0.0625rem solid #2473D5;
+  border: 0.0625rem solid rgba(35, 31, 32, 0.2);
   width: 12.375rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -825,6 +811,8 @@ nav.compressed > ul li img {
   background-color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-bottom-left-radius: 2.1875rem;
+  border-bottom-right-radius: 2.1875rem;
 }
 
 .select-body ul {

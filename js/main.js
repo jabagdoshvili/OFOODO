@@ -105,10 +105,10 @@ $(".assign").click(function() {
 });
 
 
-$( ".menu-item:not(.active)" ).mouseover(function() {
-    $(this).parent('li').addClass('active')
-  });
+// $( ".menu-item:not(.active)" ).mouseover(function() {
+//     $(this).parent('li').addClass('active')
+//   });
 
-  $( ".menu-item:not(.active)" ).mouseleave(function() {
-    $(this).parent('li').removeClass('active')
-  });
+//   $( ".menu-item:not(.active)" ).mouseleave(function() {
+//     $(this).parent('li').removeClass('active')
+//   });
