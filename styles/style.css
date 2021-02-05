@@ -47,11 +47,19 @@ thead tr th:nth-child(4) {
   width: 20%;
 }
 
+thead tr th:nth-child(5) {
+  width: 20%;
+}
+
 td:nth-child(3) {
   width: 20%;
 }
 
 td:nth-child(4) {
+  width: 20%;
+}
+
+td:nth-child(5) {
   width: 20%;
 }
 
@@ -158,8 +166,8 @@ nav ul {
 }
 
 .contact-courier a img {
-  height: 1.3rem;
-  width: 1.3rem;
+  height: 1rem;
+  width: 1rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1220,6 +1228,7 @@ table thead tr th:last-child {
 
 .user-infos {
   padding: 1rem;
+  border-radius: 18px;
   background-color: white;
   -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5);
