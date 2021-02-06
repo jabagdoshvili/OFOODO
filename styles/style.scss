@@ -12,6 +12,10 @@ li {
     list-style: none;
 }
 
+select {
+    font-family: Roboto;
+}
+
 a, li, span, p, input {
     font-family: Roboto;
 }
@@ -385,7 +389,7 @@ nav.compressed {
         padding-bottom: 1.4375rem;
         display: flex;
         justify-content: space-between;
-        ul {
+        &>ul {
             width: 41.875rem;
             display: flex;
             align-items: center;
@@ -1034,6 +1038,118 @@ table thead tr {
     flex-direction: column;
     font-size: 1rem;
 }
+
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  
+  .rev-select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: rgba(35, 31, 32, 0.5);
+    width: 12.375rem;
+    border-radius: 2.1875rem;
+    height: 3.25rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .select-styled {
+    position: absolute;
+    font-weight: normal;
+    font-size: 1.25rem;
+    font-family: Roboto;
+    line-height: 1.4375rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    border: 0.0625rem solid rgba(35, 31, 32, 0.2);
+    border-radius: 2.1875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .select-styled::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #231f2033 transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  
+  .select-styled:hover {
+    background-color: transparent;
+  }
+  
+  .select-styled:active,
+  .select-styled.active {
+    background-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .select-styled.active::after {
+    top: 9px;
+    border-color: transparent transparent #231f2033 transparent;
+  }
+  
+  .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: transparent;
+    border: 0.0625rem solid rgba(35, 31, 32, 0.2);
+    background-color: white;
+    border-bottom-left-radius: 2.1875rem;
+    border-bottom-right-radius: 2.1875rem;
+    padding: 1.0625rem 1.75rem;
+  }
+  
+  .select-options li {
+    margin: 0;
+    // padding: 12px 0;
+    // text-indent: 15px;
+    font-size: 1.25rem;
+    margin-bottom: 0.6875rem;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.4375rem;
+    color: #102C55;
+    font-size: 1.25rem;
+    margin-bottom: 0.6875rem;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.4375rem;
+    color: #102C55;
+    // border-top: 1px solid #374151;
+  }
+  
+//   .select-options li:hover {
+//     color: #374151;
+//     background: #9CA3AF;
+//   }
+  
+  .select-options li[rel="hide"] {
+    display: none;
+  }
+
 
 .user-infos {
     padding: 1rem;
