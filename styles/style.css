@@ -1271,6 +1271,11 @@ table thead tr th:last-child {
   background-color: rgba(239, 56, 49, 0.2);
 }
 
+.tb-status .ready {
+  color: #03b8ec;
+  background-color: rgba(3, 184, 236, 0.2);
+}
+
 .tb-status .opened {
   color: #5e5f5f;
   background-color: rgba(94, 95, 95, 0.2);

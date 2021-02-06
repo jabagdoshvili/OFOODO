@@ -80,6 +80,10 @@ var selectContainers = {
             id: '1',
             name: 'Order Time'
         },
+        {
+            id: '2',
+            name: 'Pick up Time'
+        }
     ]
 }
 
